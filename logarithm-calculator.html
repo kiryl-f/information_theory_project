@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logarithm Calculator</title>
+    <link rel="stylesheet" href="calculator-styles.css">
+</head>
+<body>
+    <h1>Logarithm Calculator</h1>
+    <div class="calculator-container">
+        <input type="number" id="number" placeholder="Enter number">
+        <input type="number" id="base" placeholder="Enter base (optional)">
+        <button onclick="calculateLog()" style="margin-top: 30px;  background-color: #4CAF50">Calculate</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function calculateLog() {
+            const number = document.getElementById('number').value;
+            const base = document.getElementById('base').value || 10;
+            const result = Math.log(number) / Math.log(base);
+            document.getElementById('result').innerText = `Logarithm: ${result}`;
+        }
+    </script>
+</body>
+</html>

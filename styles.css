@@ -8,13 +8,14 @@ body {
 
 h1 {
     color: #333;
+    margin-bottom: 20px;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .item {
@@ -22,9 +23,10 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
-    width: 200px;
     transition: transform 0.2s;
     cursor: pointer;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .item img {
@@ -39,4 +41,27 @@ h1 {
 
 .item:hover {
     transform: scale(1.05);
+}
+
+input, select, button {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p#result {
+    font-size: 18px;
+    color: #333;
 }

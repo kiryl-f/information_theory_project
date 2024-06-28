@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example of HTML tags">
+    <title>HTML Tags Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, nav, section, article, aside, footer {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Tags Example</h1>
+        <nav>
+            <ul>
+                <li><a href="#basic-structural-tags">Basic Structural Tags</a></li>
+                <li><a href="#text-formatting-tags">Text Formatting Tags</a></li>
+                <li><a href="#list-tags">List Tags</a></li>
+                <li><a href="#form-tags">Form Tags</a></li>
+                <li><a href="#table-tags">Table Tags</a></li>
+                <li><a href="#multimedia-tags">Multimedia Tags</a></li>
+                <li><a href="#interactive-elements">Interactive Elements</a></li>
+                <li><a href="#other-useful-tags">Other Useful Tags</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="basic-structural-tags">
+            <h2>Basic Structural Tags</h2>
+            <div>
+                <p>This is a <span>span element</span> inside a div element.</p>
+            </div>
+            <aside>
+                <p>This is an aside element.</p>
+            </aside>
+        </section>
+
+        <section id="text-formatting-tags">
+            <h2>Text Formatting Tags</h2>
+            <p><strong>Strong text</strong></p>
+            <p><em>Emphasized text</em></p>
+            <p><b>Bold text</b></p>
+            <p><i>Italic text</i></p>
+            <p><u>Underlined text</u></p>
+            <p>Line break:<br>Here is the new line.</p>
+            <p>Horizontal rule:</p>
+            <hr>
+        </section>
+
+        <section id="list-tags">
+            <h2>List Tags</h2>
+            <h3>Unordered List</h3>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+            <h3>Ordered List</h3>
+            <ol>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ol>
+            <h3>Description List</h3>
+            <dl>
+                <dt>Term 1</dt>
+                <dd>Description 1</dd>
+                <dt>Term 2</dt>
+                <dd>Description 2</dd>
+            </dl>
+        </section>
+
+        <section id="form-tags">
+            <h2>Form Tags</h2>
+            <form>
+                <label for="input-text">Text Input:</label>
+                <input type="text" id="input-text" name="input-text"><br><br>
+                <label for="textarea">Textarea:</label><br>
+                <textarea id="textarea" name="textarea"></textarea><br><br>
+                <label for="select">Select:</label>
+                <select id="select" name="select">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                </select><br><br>
+                <fieldset>
+                    <legend>Fieldset Legend</legend>
+                    <input type="radio" id="radio1" name="radio-group" value="radio1">
+                    <label for="radio1">Radio 1</label><br>
+                    <input type="radio" id="radio2" name="radio-group" value="radio2">
+                    <label for="radio2">Radio 2</label><br>
+                </fieldset><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="table-tags">
+            <h2>Table Tags</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                    </tr>
+                    <tr>
+                        <td>Data 3</td>
+                        <td>Data 4</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Footer 1</td>
+                        <td>Footer 2</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="multimedia-tags">
+            <h2>Multimedia Tags</h2>
+            <h3>Image</h3>
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="audio-file.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <h3>Video</h3>
+            <video width="320" height="240" controls>
+                <source src="movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="interactive-elements">
+            <h2>Interactive Elements</h2>
+            <details>
+                <summary>Details Summary</summary>
+                <p>This is the details content.</p>
+            </details>
+            <dialog open>
+                <p>This is a dialog.</p>
+                <button onclick="this.parentElement.close()">Close</button>
+            </dialog>
+        </section>
+
+        <section id="other-useful-tags">
+            <h2>Other Useful Tags</h2>
+            <p>Meta tags, link tags, script tags, style tags are in the head of this document.</p>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+            <script>
+                var canvas = document.getElementById('myCanvas');
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle = '#FF0000';
+                ctx.fillRect(0, 0, 150, 75);
+            </script>
+            <h3>SVG</h3>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+            </svg>
+            <h3>Iframe</h3>
+            <iframe src="https://www.example.com" width="300" height="200"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is the footer content.</p>
+    </footer>
+</body>
+</html>

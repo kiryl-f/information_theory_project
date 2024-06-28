@@ -59,6 +59,12 @@ function calculate(firstOperand, secondOperand, operator) {
         return firstOperand * secondOperand;
     } else if (operator === '/') {
         return firstOperand / secondOperand;
+    } else if (operator === 'sqrt') {
+        return Math.sqrt(firstOperand);
+    } else if (operator === '^2') {
+        return Math.pow(firstOperand, 2);
+    } else if (operator === 'mod') {
+        return firstOperand % secondOperand;
     }
 
     return secondOperand;
@@ -92,13 +98,16 @@ keys.addEventListener('click', (event) => {
         case '-':
         case '*':
         case '/':
+        case 'sqrt':
+        case '^2':
+        case 'mod':
         case '=':
             handleOperator(value);
             break;
         case '.':
             inputDecimal(value);
             break;
-        case 'all-clear':
+        case 'AC':
             resetCalculator();
             break;
         default:
@@ -109,7 +118,3 @@ keys.addEventListener('click', (event) => {
 
     updateDisplay();
 });
-
-function openLink(url) {
-    window.location.href = url;
-}

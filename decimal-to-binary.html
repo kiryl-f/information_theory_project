@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal to Binary Converter</title>
+    <link rel="stylesheet" href="calculator-styles.css">
+</head>
+<body>
+    <h1>Decimal to Binary Converter</h1>
+    <div class="calculator-container">
+        <input type="number" id="decimal" placeholder="Enter decimal number">
+        <button onclick="convertToBinary()" style="margin-top: 30px;  background-color: #4CAF50;">Convert</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function convertToBinary() {
+            const decimal = document.getElementById('decimal').value;
+            const binary = parseInt(decimal, 10).toString(2);
+            document.getElementById('result').innerText = `Binary: ${binary}`;
+        }
+    </script>
+</body>
+</html>
